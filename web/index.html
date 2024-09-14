@@ -44,9 +44,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             22110390</p><br>
     </header>
     
-    <section class="about"  id="about">
-        <h2>Giới Thiệu</h2>
-        <p>Chào mừng bạn đến với web cá nhân của<strong> Nhật!</strong></p>
+    <section class="about" id="about">
+    <h2>Giới Thiệu</h2>
+    <p>Chào mừng bạn đến với web cá nhân của<strong> Nhật!</strong></p>
+    <div class="container">
+        <div class="text-wrapper">
+            <div class="text-left">
+                <h2>Thông Tin Cá Nhân</h2>
+                <ul>
+                    <li>Họ và tên: Võ Quang Nhật</li>
+                    <li>Ngày sinh: 12/02/2004</li>
+                    <li>Địa chỉ: Quận 9, TP Hồ Chí Minh</li>
+                    <li>Học vấn: SV Khoa CNTT HCMUTE</li>
+                    <li>Sở thích: Lập trình, chơi game, nghe nhạc</li>
+                </ul>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="slider">
+                <div class="slides">
+                    <img src="images/image1.jpg" alt="Image 1">
+                    <img src="images/image2.jpg" alt="Image 2">
+                    <img src="images/image3.jpg" alt="Image 3">
+                    <img src="images/image4.jpg" alt="Image 4">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
     </section>
 
     <section class="exercises" id="exercises">
@@ -68,6 +93,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <p>&copy; 2024 VQN. All rights reserved.</p>
     </footer>
     <script>
+        // JavaScript cho slider hình ảnh
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slides img');
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            document.querySelector('.slides').style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
+        }
+
+        // Hiển thị slide đầu tiên ngay từ đầu
+        showSlides();
+
+        // Tùy chọn: Tự động chuyển đổi mỗi 3 giây
+        setInterval(nextSlide, 3000);
+        
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section');
 
@@ -92,5 +147,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             });
         });
     </script>
+    
 </body>
 </html>

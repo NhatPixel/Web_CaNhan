@@ -69,10 +69,11 @@ section {
 h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+    margin-top: 70px;
     color: black;
 }
 
-.about p, .exercises ul, .contact p {
+.exercises ul, .contact p {
     font-size: 1.2rem;
     line-height: 1.8;
 }
@@ -140,4 +141,81 @@ footer {
     background-color: #575757;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: left; /* Căn giữa các phần tử trong container */
+}
+
+.text-wrapper {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo bao phủ toàn bộ chiều rộng của container */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa nếu cần */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.text-left {
+    margin-left: 50px;
+    text-align: left; /* Căn chỉnh văn bản về bên trái */
+    flex: 1; /* Để phần tử chiếm toàn bộ không gian có sẵn */
+    line-height: 3;
+}
+
+.vertical-line {
+    width: 2px; /* Độ dày của đường kẻ */
+    height: 400px; /* Chiều cao của đường kẻ */
+    background-color: #000; /* Màu sắc của đường kẻ */
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* Hoặc thay đổi kích thước theo nhu cầu */
+    max-width: 400px; /* Kích thước tối đa của slider */
+    margin-left: 110px;
+    overflow: hidden;
+    border: 5px solid #333; /* Viền màu đen với độ dày 3px */
+    border-radius: 10px; /* Bo góc slider để tạo hiệu ứng mượt mà */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bóng đổ cho viền */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp cho bóng đổ */
+}
+
+.slider:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Hiệu ứng khi di chuột vào slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của slider */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ hình ảnh */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 3px; /* Thêm bo góc cho nút */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển tiếp cho màu nền của nút */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hiệu ứng khi di chuột vào nút */
+}
+
+.prev {
+    left: 10px; /* Điều chỉnh khoảng cách từ trái */
+}
+
+.next {
+    right: 10px; /* Điều chỉnh khoảng cách từ phải */
 }
