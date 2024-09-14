@@ -21,14 +21,14 @@ html {
     scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà cho toàn bộ trang */
 }
 
-/*section {
-    opacity: 0;  Ẩn phần tử ban đầu 
-    transition: opacity 0.5s ease-in-out;  Thêm hiệu ứng chuyển tiếp cho độ mờ 
+section {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;  
 }
 
-section:target {
-    opacity: 1;  Hiển thị phần tử khi cuộn đến 
-}*/
+section.active {
+    opacity: 1;  
+}
 
 body {
     background-color: #F3F3F3FF;
@@ -61,7 +61,9 @@ h1 {
 }
 
 section {
+    padding-top: 80px; /* Tạo khoảng trống đủ để phần nội dung không bị che */
     margin-bottom: 50px;
+    height: 100vh;
 }
 
 h2 {

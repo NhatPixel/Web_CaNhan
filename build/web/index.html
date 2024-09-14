@@ -67,5 +67,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <footer>
         <p>&copy; 2024 VQN. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // 50% của section xuất hiện trong khung nhìn sẽ kích hoạt callback
+            };
+
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active'); // Loại bỏ lớp 'active' khi phần tử không còn trong khung nhìn
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
