@@ -160,7 +160,7 @@ footer {
     margin-left: 50px;
     text-align: left; /* Căn chỉnh văn bản về bên trái */
     flex: 1; /* Để phần tử chiếm toàn bộ không gian có sẵn */
-    line-height: 3;
+    line-height: 2;
 }
 
 .vertical-line {
@@ -176,7 +176,7 @@ footer {
     margin-left: 110px;
     overflow: hidden;
     border: 5px solid #333; /* Viền màu đen với độ dày 3px */
-    border-radius: 10px; /* Bo góc slider để tạo hiệu ứng mượt mà */
+    border-radius: 15px; /* Bo góc slider để tạo hiệu ứng mượt mà */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bóng đổ cho viền */
     transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp cho bóng đổ */
 }
@@ -218,4 +218,20 @@ button:hover {
 
 .next {
     right: 10px; /* Điều chỉnh khoảng cách từ phải */
+}
+
+iframe {
+            width: 100%; /* Chiều rộng của iframe sẽ là 100% */
+            max-width: 960px; /* Giới hạn chiều rộng tối đa là 980px */
+            height: 100%; /* Chiều cao của iframe sẽ là 100% */
+            max-height: 550px; /* Giới hạn chiều cao tối đa là 550px */
+            transform: scale(0.8);
+            border-radius: 15px; /* Bo tròn góc của khung chứa iframe */
+            border: 5px solid black; /* Đặt màu viền */
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3); /* Thêm bóng đổ cho khung */
+        }
+        
+.learning {
+    display: flex; /* Sử dụng Flexbox để bố trí */
+    align-items: flex-start; /* Canh chỉnh các phần tử lên đầu */
 }
