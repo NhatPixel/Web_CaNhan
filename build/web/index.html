@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -45,38 +41,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </header>
     
     <section class="about" id="about">
-    <h2>Giới Thiệu</h2>
-    <p>Chào mừng bạn đến với web cá nhân của<strong> Nhật!</strong></p>
-    <div class="container">
-        <div class="text-wrapper">
-            <div class="text-left">
-                <h2>Thông Tin Cá Nhân</h2>
-                <ul>
-                    <li>Họ và tên: Võ Quang Nhật</li>
-                    <li>Ngày sinh: 12/02/2004</li>
-                    <li>Địa chỉ: Quận 9, TP Hồ Chí Minh</li>
-                    <li>Học vấn: SV Khoa CNTT HCMUTE</li>
-                    <li>Sở thích: Lập trình, chơi game, nghe nhạc</li>
-                </ul>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="slider">
-                <div class="slides">
-                    <img src="images/image1.jpg" alt="Image 1">
-                    <img src="images/image2.jpg" alt="Image 2">
-                    <img src="images/image3.jpg" alt="Image 3">
-                    <img src="images/image4.jpg" alt="Image 4">
+        <h2>Giới Thiệu</h2>
+        <p>Chào mừng bạn đến với web cá nhân của<strong> Nhật!</strong></p>
+        <div class="container">
+            <div class="text-wrapper">
+                <div class="text-left">
+                    <h2>Thông Tin Cá Nhân</h2>
+                    <ul>
+                        <li>Họ và tên: Võ Quang Nhật</li>
+                        <li>Ngày sinh: 12/02/2004</li>
+                        <li>Địa chỉ: Quận 9, TP Hồ Chí Minh</li>
+                        <li>Học vấn: SV Khoa CNTT HCMUTE</li>
+                        <li>Sở thích: Lập trình, chơi game, nghe nhạc</li>
+                    </ul>
                 </div>
-                <button class="prev" onclick="prevSlide()">&#10094;</button>
-                <button class="next" onclick="nextSlide()">&#10095;</button>
+                <div class="vertical-line"></div>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/image1.jpg" alt="Image 1">
+                        <img src="images/image2.jpg" alt="Image 2">
+                        <img src="images/image3.jpg" alt="Image 3">
+                        <img src="images/image4.jpg" alt="Image 4">
+                    </div>
+                    <button class="prev" onclick="prevSlide()">❮</button>
+                    <button class="next" onclick="nextSlide()">❯</button>
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
     <section class="learning" id="learning">
         <div class="text-left">
-        <h2>Bài tập</h2>
+            <h2>Bài tập</h2>
             <ul>
                 <li>Email List:<br><a href="https://nhat-bt-ltw.onrender.com/EmailList">nhat-bt-ltw.onrender.com/EmailList</a></li>
                 <li>Murach Survey:<br><a href="https://nhat-bt-ltw.onrender.com/Survey">nhat-bt-ltw.onrender.com/Survey</a></li>
@@ -86,7 +82,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li>JPA:<br><a href="https://nhat-bt-ltw.onrender.com/JPA">nhat-bt-ltw.onrender.com/JPA</a></li>
                 <li>Connection Pool:<br><a href="https://nhat-bt-ltw.onrender.com/ConnectionPool">nhat-bt-ltw.onrender.com/ConnectionPool</a></li>
                 <li>Java Mail:<br><a href="https://nhat-bt-ltw.onrender.com/JavaMail">nhat-bt-ltw.onrender.com/JavaMail</a></li>
-
             </ul>
         </div>
         <iframe src="https://nhatpixel.github.io/Unity_WebSort/" scrolling="no"></iframe>
@@ -94,68 +89,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
     <section class="contact" id="contact">
         <h2>Liên Hệ</h2>
-        <p>Email: <a href="mailto:nhat.mdlv@gmail.com">nhat.mdlv@gmail.com</a></p>
-        <p>Số điện thoại: <a href="tel:+84329119542">0329119542</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/lanhat.nhat.5">facebook.com/lanhat.nhat.5</a></p>
+        <p><img src="images/email_icon.png" alt="Email Icon" style="width: 20px; height: 20px;"> Email: <a href="mailto:nhat.mdlv@gmail.com"> nhat.mdlv@gmail.com</a></p>
+        <p><img src="images/phone_icon.png" alt="Phone Icon" style="width: 20px; height: 20px;"> Số điện thoại: <a href="tel:+84329119542"> 0329119542</a></p>
+        <p><img src="images/facebook_icon.png" alt="Facebook Icon" style="width: 20px; height: 20px;"> Facebook: <a href="https://www.facebook.com/lanhat.nhat.5"> facebook.com/lanhat.nhat.5</a></p>
     </section>
     <footer>
-        <p>&copy; 2024 VQN. All rights reserved.</p>
+        <p>© 2024 VQN. All rights reserved.</p>
     </footer>
-    <script>
-        // JavaScript cho slider hình ảnh
-        let slideIndex = 0;
-
-        function showSlides() {
-            const slides = document.querySelectorAll('.slides img');
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-            if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-            document.querySelector('.slides').style.transform = `translateX(${-slideIndex * 100}%)`;
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            showSlides();
-        }
-
-        function prevSlide() {
-            slideIndex--;
-            showSlides();
-        }
-
-        // Hiển thị slide đầu tiên ngay từ đầu
-        showSlides();
-
-        // Tùy chọn: Tự động chuyển đổi mỗi 3 giây
-        setInterval(nextSlide, 3000);
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5 // 50% của section xuất hiện trong khung nhìn sẽ kích hoạt callback
-            };
-
-            const observer = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    } else {
-                        entry.target.classList.remove('active'); // Loại bỏ lớp 'active' khi phần tử không còn trong khung nhìn
-                    }
-                });
-            }, options);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
