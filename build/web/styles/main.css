@@ -163,6 +163,14 @@ footer {
     line-height: 1.7;
 }
 
+.text-left ul{
+    max-height: 400px;
+    width: 400px;
+    overflow-y: scroll;
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
 .vertical-line {
     width: 2px; /* Độ dày của đường kẻ */
     height: 400px; /* Chiều cao của đường kẻ */
@@ -221,16 +229,16 @@ button:hover {
 }
 
 iframe {
-            margin-top: 100px;
-            width: 100%; /* Chiều rộng của iframe sẽ là 100% */
-            max-width: 960px; /* Giới hạn chiều rộng tối đa là 980px */
-            height: 100%; /* Chiều cao của iframe sẽ là 100% */
-            max-height: 550px; /* Giới hạn chiều cao tối đa là 550px */
-            transform: scale(0.8);
-            border-radius: 15px; /* Bo tròn góc của khung chứa iframe */
-            border: 5px solid black; /* Đặt màu viền */
-            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3); /* Thêm bóng đổ cho khung */
-        }
+    margin-top: 50px;
+    width: 100%; /* Chiều rộng của iframe sẽ là 100% */
+    max-width: 980px; /* Giới hạn chiều rộng tối đa là 980px */
+    height: 200%; /* Chiều cao của iframe sẽ là 100% */
+    max-height: 550px; /* Giới hạn chiều cao tối đa là 550px */
+    transform: scale(0.8);
+    border-radius: 15px; /* Bo tròn góc của khung chứa iframe */
+    border: 5px solid black; /* Đặt màu viền */
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3); /* Thêm bóng đổ cho khung */
+}
         
 .learning {
     display: flex; /* Sử dụng Flexbox để bố trí */
